@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IS 117 Assignment A10: a simple webpage that saves and displays a cookie.">
+  <title>IS 117 A10 - Cookie Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">IS 117 · Assignment A10</p>
+      <h1>Cookie Demonstration</h1>
+      <p class="intro">This page stores a value in a browser cookie and reads it when you return or refresh the page.</p>
+    </header>
+
+    <section class="panel" aria-live="polite">
+      <div id="saved-view" hidden>
+        <h2>Your saved cookie</h2>
+        <p class="saved-label">The browser saved this value:</p>
+        <p id="cookie-value" class="cookie-value"></p>
+        <p class="hint">Refresh the page. Your saved value should still appear without the entry form.</p>
+        <button id="change-button" class="secondary" type="button">Change cookie value</button>
+      </div>
+
+      <div id="entry-view" hidden>
+        <h2>Set your cookie</h2>
+        <p>Enter a name, favorite activity, or another value you would like this page to remember.</p>
+        <form id="cookie-form">
+          <label for="cookie-input">Cookie value</label>
+          <input id="cookie-input" name="cookieValue" type="text" maxlength="100" autocomplete="off" placeholder="Enter a value" required>
+          <button type="submit">Save cookie</button>
+        </form>
+      </div>
+      <p id="status" class="status" role="status"></p>
+    </section>
+    <footer>&copy; 2026 Shivani Shelke</footer>
+  </main>
+</body>
+</html>
